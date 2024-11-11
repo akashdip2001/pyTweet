@@ -118,7 +118,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+#STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -134,3 +137,14 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/pyTweet/'
 LOGOUT_REDIRECT_URL = 'PYTweet/'
+
+# # Cloudinary settings
+# STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+# MEDIA_URL = '/media/'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# # CLOUDINARY_STORAGE = {
+# #     'CLOUD_NAME': 'dowjyfj8n',
+# #     'API_KEY': '111111111111111',   # Add your API key
+# #     'API_SECRET
+# #     '111111111111111',   # Add your API secret key
+# # }
