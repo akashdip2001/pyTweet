@@ -8,12 +8,7 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
 
 import os
-
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pyMedia.settings')
-
-application = get_wsgi_application()
-
-# for deploy to versal
-app.applications
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pyMedia.settings")
+app = get_wsgi_application()
