@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+pyTweet
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4">Welcome to pyTweet Django project</h1>
+
+<a href="{% url 'tweet_create' %}" class="btn btn-primary mb-4">Create a new tweet</a>
+<div class="container row gap-3">
+    {% for tweet in tweets %} <!--# for-loop through the tweets from view,py -> def tweet_list(request): tweets = -->
+    <div class="card mt-3" style="width: 24rem;">
+        <img src="{{tweet.photo.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-title">{{tweet.user.username}}</p>
+            <h3 class="card-text">{{tweet.text}}</h3>
+            {% if tweet.user == user %}
+            <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-warning">Edit</a>
+            <a href="{% url 'tweet_delete' tweet.id %}" class="btn btn-danger">Delete</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

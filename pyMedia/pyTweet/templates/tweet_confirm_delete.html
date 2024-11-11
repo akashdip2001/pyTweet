@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+pyTweet
+{% endblock %}
+
+{% block content %}
+<h2 class="text-center mt-4">If once Delete -> Never come back</h2>
+<h1 class="text-center mt-4" style="color: rgb(252, 58, 58);">are you sure to Delete ?</h1>
+
+<!--see the post preview to delete-->
+<div class="card mt-3 mx-auto" style="width: 24rem;">
+    {% if tweet.photo %}
+        <img src="{{ tweet.photo.url }}" class="card-img-top" alt="Tweet image">
+    {% endif %}
+    <div class="card-body text-center">
+        <p class="card-title">{{ tweet.user.username }}</p>
+        <h3 class="card-text">{{ tweet.text }}</h3>
+    </div>
+</div>
+
+
+<form method="post">
+    {% csrf_token %}
+    <div class="text-center mt-4">
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="{% url 'tweet_list' %}" class="btn btn-success">Cancel</a>
+    </div>
+</form>
+
+{% endblock %}

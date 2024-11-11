@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    pyTweet
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mt-4">Welcome to pyTweet Django project</h1>
+
+    <h2 class="text-left">
+        {% if form.instance.pk %}
+            Edit
+        {% else %}
+            Create
+        {% endif %}
+    </h2>
+
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %} <!-- #for views.py -> def tweet_create(request): -> if form.is_valid(): # Check if the form is valid -->
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-warning">Submit</button>
+        <button type="reset" class="btn btn-danger">Reset</button>
+        <!-- <button type="button" class="btn btn-primary" onclick="window.location.href='{% url 'tweet_list' %}'">Cancel</button> -->
+         <a href="{% url 'tweet_list' %}" class="btn btn-primary">Cancel</a>
+    </form>
+{% endblock %}
