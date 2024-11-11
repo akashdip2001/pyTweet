@@ -72,7 +72,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pyMedia.wsgi.application'
+#WSGI_APPLICATION = 'pyMedia.wsgi.application'
+ASGI_APPLICATION = 'pyMedia.asgi.application'
 
 
 # Database
