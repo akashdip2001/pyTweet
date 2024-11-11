@@ -1,4 +1,4 @@
-<img src="img/01">
+<img src="img/01.png">
 
 [docs](https://docs.chaicode.com/getting-started-with-django/)
 
@@ -20,13 +20,13 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-<img src="img/02">
+<img src="img/02.png">
 
 ```python
 python manage.py runserver
 ```
 
-<img src="img/03">
+<img src="img/03.png">
 
 ### Create Superuser
 
@@ -39,8 +39,8 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-<img src="img/04">
-<img src="img/05">
+<img src="img/04.png">
+<img src="img/05.png">
 
 ```yaml
 C:\Users\akash\Desktop\Py Projects\full stack\01 img text post with Admin\
@@ -71,7 +71,7 @@ C:\Users\akash\Desktop\Py Projects\full stack\01 img text post with Admin\
 └── db.sqlite3                   # Default SQLite database file (generated after migrations)
 ```
 
-<img src="img/06">
+<img src="img/06.png">
 
 ```python
 import os
@@ -88,8 +88,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 ```
 
-<img src="img/07">
-<img src="img/08">
+<img src="img/07.png">
+<img src="img/08.png">
 
 ```python
 from django.conf import settings
@@ -219,7 +219,7 @@ after tweet (project/url.py) control pass to --> Tweet app --> app/url.py --> th
 python manage.py runserver
 ```
 
-<img src="img/09">
+<img src="img/09.png">
 <img src="img/10.png">
 
 <img src="https://github.com/akashdip2001/college-final-year-project/raw/main/img/colour_line.png">
