@@ -1,3 +1,17 @@
+```yaml
+Py Projects
+│
+│── Python Projects
+│── Django Projects
+│     │
+│     │── Twitter: (under Devlopment)
+│     └── ...
+└── ...    
+```
+
+| [notes](https://github.com/akashdip2001/ML-Machine-Learning/blob/main/py/README.md) | [Python Projects](https://github.com/akashdip2001/Python-Projects) | [Django Projects](https://github.com/akashdip2001/pyTweet) |
+| --- | --- | --- |
+
 <img src="img/01.png">
 
 [docs](https://docs.chaicode.com/getting-started-with-django/)
